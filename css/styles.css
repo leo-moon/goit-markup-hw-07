@@ -4,8 +4,6 @@
     --main-color-dark-theme: #FFFFFF;
 }
 
-
-
 h1,
 h2,
 h3,
@@ -132,7 +130,6 @@ section {
      .nav-link-list::after,
 .port-nav-link-list::after {
     content: "";
-
     position: absolute;
     left: 0;
     top:calc(50% + 40px - 4px);
@@ -147,18 +144,11 @@ section {
     color: var(--accent-color);
 }
 
-.nav-mail {
-    position: relative;
-}
+     /* ==== email, tel ======= */
 
-.email {
-    margin-right: 30px;
-    margin-left: auto;
-}
-
-.email,
-.tel {
-    display: inline-block;
+.header-contacts {
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -169,60 +159,44 @@ section {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.email::before,
-.tel::before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    /* color: #757575; */
-    fill: red;
+.email {
+    margin-right: 30px;
+    margin-left: auto;
 }
 
-/* envelope */
-.email::before {
-    content: "";
-    display: inline-block;
+.envelope,
+.smartphone {
+    margin-right: 10px;
+    padding: 0;
+    background-size: contain;
+    fill: #757575;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.envelope {
     width: 16px;
     height: 12px;
-    vertical-align: middle;
-    margin-right: 10px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    /* background-color: #655092; */
-    background-image: url(../images/sprite.svg#envelope);
-    
-    fill: #757575;
-    transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tel::before {
+.smartphone {
     width: 10px;
     height: 16px;
-    background-image: url(../images/main/header/smartphone.svg);
-    transition-property: background-image;
-    transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1)
-}
-
-.tel:hover::before,
-.tel:focus::before {
-    background-image: url(../images/main/header/smartphone-hover.svg);
-}
-
-.email:hover::before,
-.email:focus::before {    
-    background-image: url(../images/main/header/envelope-hover.svg);
 }
 
 .email:hover,
 .email:focus,
 .tel:hover,
-.tel:focus {
+.tel:focus  {
     color: var(--accent-color);
 }
 
+.email:hover .envelope,
+.email:focus .envelope,
+.tel:hover .smartphone,
+.tel:focus .smartphone {
+    fill: var(--accent-color);
+}
 
 /*==================== /HEADER ====================*/
 
@@ -337,27 +311,19 @@ section {
     width: 100%;
     padding: 11px 12px;
     padding-left: 42px;
-    /* border: 1px solid rgba(33, 33, 33, 0.2); */
     border: none;
     border-radius: 4px;
     font-size: 14px;
     outline: none;
+    cursor: pointer;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .f-svg {
     position: relative;
     margin-bottom: 10px;
-    cursor: pointer;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.f-svg:hover,
-.f-svg:focus {
-    /* fill: var(--accent-color); */
-    border: 1px solid var(--accent-color);
-    /* border-radius: 4px; */
 }
 
 .form-svg {
@@ -375,11 +341,13 @@ section {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
-.f-svg:hover .form-svg {
-    fill: var(--accent-color);
+.form-input-field:hover,
+.form-input-field:focus {
+    border: 1px solid var(--accent-color);
 }
 
-.f-svg:focus .form-svg {
+.form-input-field:hover + .form-svg,
+.form-input-field:focus + .form-svg {
     fill: var(--accent-color);
 }
 
@@ -407,7 +375,6 @@ section {
     padding: 10px 55px;
     color: var(--main-color-dark-theme);
     background: #188CE8;
-    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
     border-radius: 4px;
     border-color: #188CE8;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -438,7 +405,7 @@ section {
     color: #757575;
 }
 
-/* .visuality-hidden {
+.visuality-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -447,21 +414,27 @@ section {
     border: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
-} */
+}
 
-.form-checkbox  {
-    appearance: none;
+.checkbox-check {
     position: absolute;
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
     width: 16px;
     height: 15px;
-    background-image: url(../images/icon-not-check.svg);
 }
 
-.form-checkbox:checked {
-    background-image: url(../images/icon-check.svg);
+.checkbox-not-check {
+    visibility: hidden;
+}
+
+.form-checkbox:checked + .checkbox-check{
+    visibility: hidden;
+}
+
+.form-checkbox:checked ~ .checkbox-not-check {
+    visibility: visible;
 }
 
 .contract {
@@ -540,9 +513,6 @@ section {
     letter-spacing: 0.06em;
     color: var(--main-color-dark-theme);
 
-    /* transition-property: background-color;
-    transition-duration: 250ms;*/
-    transition-property: background-color;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -562,10 +532,6 @@ section {
 
 
 /* =================== destination ====================*/
-
-/* .destination {
-    padding-bottom: 94px;
-} */
 
 .destination-item {
     display: flex;
@@ -598,12 +564,6 @@ section {
     width: 70px;
     height: 70px;
 }
-/* =================== /destination ====================*/
-
-
-
-
-
 
 .destination-title-item {
     font-weight: 700;
@@ -624,13 +584,13 @@ section {
     color: #757575;
 }
 
+/* =================== /destination ====================*/
+
+
+
 
 
 /* =================== business-photo ====================*/
-
-/* .business-photo {
-    padding-bottom: 94px;
-} */
 
 .business-photo-title {
     text-align: center;
@@ -670,7 +630,6 @@ section {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.12;
-    /* text-align: center; */
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
@@ -789,9 +748,6 @@ section {
 
 
 /* =================== clients ====================*/
-/* .clients {
-    padding: 94px 0px;
-} */
 
 .clients-title {
     margin-bottom: 50px;
@@ -843,7 +799,6 @@ section {
 }
 /* =================== /clients ====================*/
 
-
 /*==================== /MAIN ====================*/
 
 
@@ -853,7 +808,6 @@ section {
 .footer {
     background-color: #2F303A;
     padding: 60px 0px;
-    /*  margin-top: -85px; */
     display: flex;
     flex-direction: column;
 }
@@ -962,10 +916,10 @@ section {
 
 .footer-form-btn {
     position: relative;
-    text-align: start;
-    padding: 0 28px;
     width: 200px;
     height: 50px;
+    text-align: start;
+    padding: 0 28px;
     cursor: pointer;
 
     font-weight: 700;
@@ -1012,10 +966,6 @@ section {
 
 
 /*==================== PORTFOLIO-MAIN ====================*/
-/*
-.port-background {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-} */
 
 .port-portfolio {
     color: var(--accent-color);
@@ -1101,7 +1051,6 @@ section {
     padding: 63px 24px;
     background-color: var(--accent-color);
     opacity: 0.9;
-    /* background: rgba(33, 150, 243, 0.9); */
     outline: var(--accent-color);
     transform: translateY(100%);
     transition-property: transform;
