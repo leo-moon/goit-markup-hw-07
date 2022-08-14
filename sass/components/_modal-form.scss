@@ -27,6 +27,13 @@
     color: var(--second-color-light-theme);
 }
 
+.f-svg {
+        position: relative;
+        margin-bottom: 10px;
+
+
+    }
+    
 .form-input-field {
     width: 100%;
     padding: 11px 12px;
@@ -49,11 +56,6 @@
         color: var(--placeholder-color);
     }
 
-}
-
-.f-svg {
-    position: relative;
-    margin-bottom: 10px;
 }
 
 .form-svg {
@@ -112,6 +114,10 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--svg-fill-main-color);
+
+    .contract {
+        color: var(--accent-color);
+    }
 }
 
 .checkbox-check {
@@ -133,15 +139,6 @@
     .form-checkbox:checked~& {
         visibility: visible;
     }
-}
-
-
-.contract {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: var(--accent-color);
 }
 
 .form-comment {
