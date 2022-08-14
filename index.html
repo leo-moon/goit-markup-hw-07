@@ -8,7 +8,10 @@
         
         
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
-        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/main.min.css">
+        <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -124,7 +127,7 @@
 
             <section class="business-photo" >
                 <div class="container">
-                    <h2 class="business-photo-title">Чем мы занимаемся</h2>
+                    <h3 class="section-title">Чем мы занимаемся</h3>
                     <ul class="business-photo-item">
                         <li class="business-photo-img"><img src="./images/main/img1.jpg" alt="фото" width="370">
                             <div class="business-block">
@@ -147,7 +150,7 @@
 
             <section class="personal">
                 <div class="container" >
-                    <h2 class="personal-title">Наша команда</h2>
+                    <h3 class="section-title">Наша команда</h3>
                         <ul  class="team">
                             <li class="own-data">
                                 <img src="./images/main/1.jpg" class="team-photo" alt="фото" width="270" >
@@ -321,7 +324,7 @@
 
             <section class="clients">
                 <div class="container">
-                    <h3 class="clients-title">Постоянные клиенты</h3>
+                    <h3 class="section-title">Постоянные клиенты</h3>
                     <ul class="clients-icons">
                         <li class="clients-icon-list ">
                                 <a href="#" alt="link" class="clients-link">
@@ -418,10 +421,16 @@
                                 </div>
                             </label>
 
-                            <label for="f-comment" for="comment" class="form-list-name">Комментарий</label>
-                            <div class="f-svg">
-                                <textarea name="user-comment" id="comment"  rows="6" class="form-comment form-input-field" placeholder="Введите текст" id="f-comment"></textarea>
-                            </div>
+                            <label for="f-comment" for="comment" class="form-list-name">Комментарий
+                                <div class="f-svg">
+                                    <textarea name="user-comment" 
+                                            rows="6" 
+                                            class="form-comment form-input-field" 
+                                            placeholder="Введите текст" 
+                                            id="f-comment"></textarea>
+                                
+                                </div>
+                            </label>
                         </div>
 
                         <label class="label-checkbox">
@@ -441,7 +450,7 @@
                                 </a> 
                         </label>
 
-                        <button type="submit" class="form-button">Отправить
+                        <button type="submit" class="button form-button">Отправить
                         </button>
                         
                     </form>
@@ -479,8 +488,9 @@
                     <p class="footer-list">Присоединяйтесь</p>
                     <ul class="footer-icons">
                         <li class="team-icon-list">
-                            <a href="https://www.instagram.com
-" alt="instagram" class="team-a-icons  footer-a-icons">
+                            <a  href="https://www.instagram.com" 
+                                alt="instagram" 
+                                class="team-a-icons  footer-a-icons">
                                 <svg class="team-list">
                                     <use href="./images/sprite.svg#instagram" class="footer-icon">
                                     </use>
@@ -515,12 +525,14 @@
                 </div>
                 <form class="footer-form">
                     <h3 class="footer-form-title">Подпишитесь на рассылку</h3>
+                    <div class="footer-form-mail-btn">
                         <input type="email" placeholder="E-mail" class="footer-input">
-                        <button type="submit" class="footer-form-btn">Подписаться
+                        <button type="submit" class="button footer-form-btn">Подписаться
                             <svg class="footer-send-svg">
                                 <use href="./images/sprite.svg#send" class="f-s"></use>
                             </svg>
                         </button>
+                    </div>
                 </form>
             </div>
        </footer>

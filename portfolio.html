@@ -11,6 +11,8 @@
 
      <!-- <link rel="stylesheet" href="./css/reset.css">  -->
         <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/main.min.css">
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
         
         <title>portfolio</title>
@@ -50,7 +52,6 @@
         </header>
 
         <main>
-
             <section class="port-main">
                 <div class="container">
                     <div class="port-background">
@@ -65,11 +66,12 @@
 
                         <ul class="port-projects">
                             <li class="port-project">
+
                                 <div class="port-overlay-overflow">
                                     <div class="port-overlay">
                                             <p class="port-overlay-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                                 это позволит посетителю получить
-                                                исчерпывающие сведения  о компании или частном лице.</p>
+                                                исчерпывающие сведения о компании или частном лице.</p>
                                     </div>
                                 </div>
                                 <img src="./images/portfolio/Технокряк.jpg" class="photo" alt="фото">
@@ -179,10 +181,10 @@
                                 </div>
                             </li>
                         </ul>
+
                     </div>
                 </div>
             </section>
-
         </main>
 
         <footer class="footer">
@@ -240,12 +242,14 @@
                 </div>
                 <form class="footer-form">
                     <h3 class="footer-form-title">Подпишитесь на рассылку</h3>
-                    <input type="email" placeholder="E-mail" class="footer-input">
-                    <button type="submit" class="footer-form-btn">Подписаться
-                        <svg class="footer-send-svg">
-                            <use href="./images/sprite.svg#send" class="f-s"></use>
-                        </svg>
-                    </button>
+                    <div class="footer-form-mail-btn">
+                        <input type="email" placeholder="E-mail" class="footer-input">
+                        <button type="submit" class="button footer-form-btn">Подписаться
+                            <svg class="footer-send-svg">
+                                <use href="./images/sprite.svg#send" class="f-s"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </form>
             </div>
         </footer>
