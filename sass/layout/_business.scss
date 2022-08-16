@@ -1,19 +1,19 @@
-.business-photo {
+.business__photo {
     padding-top: 0;
 }
 
-.business-photo-item {
+.business__photo-item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.business-photo-img {
+.business__photo-img {
     position: relative;
     width: calc((100% - 30px*2)/3);
 }
 
-.business-block {
+.business__block {
     position: absolute;
     width: 100%;
     height: 70px;
@@ -25,7 +25,7 @@
     background-color: var(--busness-background-color);
 }
 
-.bsn-info {
+.business__info {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.12;

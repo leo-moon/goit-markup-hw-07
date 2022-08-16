@@ -1,4 +1,4 @@
-.form-title {
+.modal__form-title {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -9,13 +9,13 @@
     color: var(--main-color-light-theme);
 }
 
-.form-input {
+.modal__form-input {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
 
-.form-list-name {
+.modal__form-list-name {
     display: flex;
     flex-direction: column;
     margin-bottom: 4px;
@@ -27,14 +27,14 @@
     color: var(--second-color-light-theme);
 }
 
-.f-svg {
+.modal__f-svg {
         position: relative;
         margin-bottom: 10px;
 
 
     }
     
-.form-input-field {
+.modal__form-input-field {
     width: 100%;
     padding: 11px 12px;
     padding-left: 42px;
@@ -58,7 +58,7 @@
 
 }
 
-.form-svg {
+.modal__form-svg {
     position: absolute;
     content: "";
     display: inline-block;
@@ -72,13 +72,13 @@
     fill: var(--main-color-light-theme);
     transition: fill var(--transition-dur-fun);
 
-    .form-input-field:hover+&,
-    .form-input-field:focus+& {
+    .modal__form-input-field:hover+&,
+    .modal__form-input-field:focus+& {
         fill: var(--accent-color);
     }
 }
 
-.form-solusion {
+.modal__form-solusion {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -88,7 +88,7 @@
     color: var(--second-color-light-theme);
 }
 
-.form-button {
+.modal__form-button {
     padding: 10px 55px;
     background: var(--form-btn-color);
     border-color: var(--form-btn-color);
@@ -101,7 +101,7 @@
     }
 }
 
-.label-checkbox {
+.modal__label-checkbox {
     position: relative;
     display: inline-block;
     align-items: center;
@@ -128,7 +128,7 @@
     width: 16px;
     height: 15px;
 
-    .form-checkbox:checked+& {
+    .modal__form-checkbox:checked+& {
         visibility: hidden;
     }
 }
@@ -136,12 +136,12 @@
 .checkbox-not-check {
     visibility: hidden;
     
-    .form-checkbox:checked~& {
+    .modal__form-checkbox:checked~& {
         visibility: visible;
     }
 }
 
-.form-comment {
+.modal__form-comment {
     resize: none;
     font-weight: 400;
     font-size: 14px;

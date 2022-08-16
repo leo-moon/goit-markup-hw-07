@@ -196,7 +196,7 @@ section {
   fill: var(--accent-color);
 }
 
-.form-title {
+.modal__form-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -206,13 +206,13 @@ section {
   color: var(--main-color-light-theme);
 }
 
-.form-input {
+.modal__form-input {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.form-list-name {
+.modal__form-list-name {
   display: flex;
   flex-direction: column;
   margin-bottom: 4px;
@@ -223,12 +223,12 @@ section {
   color: var(--second-color-light-theme);
 }
 
-.f-svg {
+.modal__f-svg {
   position: relative;
   margin-bottom: 10px;
 }
 
-.form-input-field {
+.modal__form-input-field {
   width: 100%;
   padding: 11px 12px;
   padding-left: 42px;
@@ -240,14 +240,14 @@ section {
   border: 1px solid rgba(33, 33, 33, 0.2);
   transition: border var(--transition-dur-fun);
 }
-.form-input-field:hover, .form-input-field:focus {
+.modal__form-input-field:hover, .modal__form-input-field:focus {
   border: 1px solid var(--accent-color);
 }
-.form-input-field input::placeholder {
+.modal__form-input-field input::placeholder {
   color: var(--placeholder-color);
 }
 
-.form-svg {
+.modal__form-svg {
   position: absolute;
   content: "";
   display: inline-block;
@@ -261,11 +261,11 @@ section {
   fill: var(--main-color-light-theme);
   transition: fill var(--transition-dur-fun);
 }
-.form-input-field:hover + .form-svg, .form-input-field:focus + .form-svg {
+.modal__form-input-field:hover + .modal__form-svg, .modal__form-input-field:focus + .modal__form-svg {
   fill: var(--accent-color);
 }
 
-.form-solusion {
+.modal__form-solusion {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -274,17 +274,17 @@ section {
   color: var(--second-color-light-theme);
 }
 
-.form-button {
+.modal__form-button {
   padding: 10px 55px;
   background: var(--form-btn-color);
   border-color: var(--form-btn-color);
   transition: border-color var(--transition-dur-fun), box-shadow var(--transition-dur-fun);
 }
-.form-button:hover, .form-button:focus {
+.modal__form-button:hover, .modal__form-button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.label-checkbox {
+.modal__label-checkbox {
   position: relative;
   display: inline-block;
   align-items: center;
@@ -298,7 +298,7 @@ section {
   letter-spacing: 0.03em;
   color: var(--svg-fill-main-color);
 }
-.label-checkbox .contract {
+.modal__label-checkbox .contract {
   color: var(--accent-color);
 }
 
@@ -310,18 +310,18 @@ section {
   width: 16px;
   height: 15px;
 }
-.form-checkbox:checked + .checkbox-check {
+.modal__form-checkbox:checked + .checkbox-check {
   visibility: hidden;
 }
 
 .checkbox-not-check {
   visibility: hidden;
 }
-.form-checkbox:checked ~ .checkbox-not-check {
+.modal__form-checkbox:checked ~ .checkbox-not-check {
   visibility: visible;
 }
 
-.form-comment {
+.modal__form-comment {
   resize: none;
   font-weight: 400;
   font-size: 14px;
@@ -334,14 +334,14 @@ section {
   border-bottom: 1px solid var(--header-border-bttm);
 }
 
-.box {
+.header__box {
   padding-top: 24px;
   padding-bottom: 25px;
   display: flex;
   align-items: center;
 }
 
-.main-logo {
+.logo__main {
   margin-right: 93px;
 }
 
@@ -354,16 +354,16 @@ section {
   text-decoration: none;
 }
 
-.logo-web {
+.logo__web {
   text-decoration: var(--color-light-theme);
   color: var(--accent-color);
   transition: text-decoration var(--transition-dur-fun);
 }
-.logo-web:hover, .logo-web:focus {
+.logo__web:hover, .logo__web:focus {
   text-decoration: 2px solid var(--accent-color) underline;
 }
 
-.logo-studio {
+.logo__studio {
   color: var(--main-color-light-theme);
 }
 
@@ -374,7 +374,7 @@ section {
   justify-content: space-between;
 }
 
-.nav-link {
+.navigation__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -384,16 +384,18 @@ section {
   transition-property: color;
   transition: color var();
 }
-.nav-link:hover, .nav-link:focus {
+.navigation__link:hover, .navigation__link:focus {
   color: var(--accent-color);
 }
 
-.nav-list {
+.navigation__list {
   position: relative;
 }
 
-.nav-link-list::after,
-.port-nav-link-list::after {
+.navigation__list_current {
+  color: var(--accent-color);
+}
+.navigation__list_current::after {
   content: "";
   position: absolute;
   left: 0;
@@ -481,17 +483,17 @@ section {
   margin-bottom: 30px;
 }
 
-.destination-item {
+.destination__item {
   display: flex;
   justify-content: space-between;
 }
 
-.destination-box {
+.destination__box {
   width: calc((100% - 90px) / 4);
   font-size: 1rem;
 }
 
-.dest-befor {
+.destination__befor {
   height: 120px;
   display: flex;
   justify-content: center;
@@ -501,17 +503,17 @@ section {
   transition-property: filter, border;
   transition: filter var(--transition-dur-fun), border var(--transition-dur-fun);
 }
-.dest-befor:hover {
+.destination__befor:hover {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border: 1px solid var(--dest-hover-border-color);
 }
 
-.dest-img {
+.destination__img {
   width: 70px;
   height: 70px;
 }
 
-.destination-title-item {
+.destination__title-item {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -522,7 +524,7 @@ section {
   color: var(--main-color-light-theme);
 }
 
-.destination-link {
+.destination__link {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -530,22 +532,22 @@ section {
   color: var(--second-color-light-theme);
 }
 
-.business-photo {
+.business__photo {
   padding-top: 0;
 }
 
-.business-photo-item {
+.business__photo-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.business-photo-img {
+.business__photo-img {
   position: relative;
   width: calc((100% - 60px) / 3);
 }
 
-.business-block {
+.business__block {
   position: absolute;
   width: 100%;
   height: 70px;
@@ -556,7 +558,7 @@ section {
   background-color: var(--busness-background-color);
 }
 
-.bsn-info {
+.business__info {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.12;
@@ -574,17 +576,17 @@ section {
   justify-content: space-between;
 }
 
-.own-data {
+.team__own-data {
   background: var(--main-color-dark-theme);
   text-align: center;
 }
 
-.name-job {
+.team__name-job {
   box-shadow: var(--team-shadow-card);
   border-radius: 0px 0px 4px 4px;
 }
 
-.name {
+.team__name {
   padding-top: 30px;
   padding-bottom: 10px;
   font-weight: 500;
@@ -601,18 +603,18 @@ section {
   color: var(--second-color-light-theme);
 }
 
-.team-icons {
+.team__icons {
   display: flex;
   padding: 16px 32px 30px 32px;
   justify-content: space-between;
   fill: var(--second-color-light-theme);
 }
 
-.team-icon-list {
+.team__icon-list {
   width: calc((100% - 30px) / 4);
 }
 
-.team-a-icons {
+.team__a-icons {
   width: 100%;
   height: 44px;
   border-radius: 50%;
@@ -625,7 +627,7 @@ section {
   transition-property: fill;
   transition: fill var(--transition-dur-fun), background-color var(--transition-dur-fun);
 }
-.team-a-icons:hover, .team-a-icons:focus {
+.team__a-icons:hover, .team__a-icons:focus {
   border-radius: 50%;
   fill: var(--main-color-dark-theme);
   background-color: var(--accent-color);
@@ -633,7 +635,7 @@ section {
   outline: none;
 }
 
-.team-list {
+.team__list {
   content: "";
   background-repeat: no-repeat;
   width: 20px;
@@ -641,17 +643,17 @@ section {
   background-size: contain;
 }
 
-.clients-icons {
+.clients__icons {
   display: flex;
   justify-content: space-between;
 }
 
-.clients-icon-list {
+.clients__icon-list {
   width: calc((100% - 150px) / 6);
   height: 92px;
 }
 
-.clients-link {
+.clients__link {
   width: 100%;
   height: 100%;
   display: flex;
@@ -664,13 +666,13 @@ section {
   transition-property: fill;
   transition: fill var(--transition-dur-fun), border var(--transition-dur-fun);
 }
-.clients-link:focus, .clients-link:hover {
+.clients__link:focus, .clients__link:hover {
   outline: none;
   border: 1px solid var(--accent-color);
   fill: var(--accent-color);
 }
 
-.clients-list {
+.clients__list {
   width: 106px;
   height: 60px;
   border: none;
@@ -839,7 +841,7 @@ section {
   margin-bottom: 20px;
 }
 
-.logo-studio-footer {
+.logo-footer__studio {
   color: var(--main-color-dark-theme);
 }
 

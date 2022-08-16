@@ -1,14 +1,14 @@
-.destination-item {
+.destination__item {
     display: flex;
     justify-content: space-between;
 }
 
-.destination-box {
+.destination__box {
     width: calc((100% - 30px*3)/4);
     font-size: 1rem;
 }
 
-.dest-befor {
+.destination__befor {
     height: 120px;
     display: flex;
     justify-content: center;
@@ -24,12 +24,12 @@
         border: 1px solid var(--dest-hover-border-color);
     }
 }
-.dest-img {
+.destination__img {
     width: 70px;
     height: 70px;
 }
 
-.destination-title-item {
+.destination__title-item {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -40,7 +40,7 @@
     color: var(--main-color-light-theme);
 }
 
-.destination-link {
+.destination__link {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;

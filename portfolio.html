@@ -18,36 +18,40 @@
         <title>portfolio</title>
     </head>
     <body>
-        <header class="main-header">
-            <div class="container box">
-                <div class="logo main-logo">
-                    <a href="#" class="logo-web" id="1">Web<span class=" logo-studio logo-web">Studio</span>
+        <header class="header">
+            <div class="container header__box">
+                <div class="logo logo__main">
+                    <a href="" class="logo__web">Web<span class="logo__web logo__studio">Studio</span>
                     </a>
                 </div>
-                <nav>
+                <nav class="navigation__main">
                     <ul class="navigation">
-                        <li class="nav-list"><a class="nav-link" href="./index.html">Студия</a></li>
-                        <li class="nav-list">
-                                <a class="nav-link port-nav-link-list port-portfolio" href="./portfolio.html">Портфолио</a>
+                        <li class="navigation__list">
+                            <a class="navigation__link" href="./index.html">Студия</a>
                         </li>
-                        <li class="nav-list"><a class="nav-link" href="">Кoнтакты</a></li>
+                        <li class="navigation__list">
+                            <a class="navigation__link navigation__list_current" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="navigation__list">
+                            <a class="navigation__link" href="">Кoнтакты</a>
+                        </li>
                     </ul>
                 </nav>
-
+        
                 <a class="header-contacts email" href="mailto:info@devstudio.com">
                     <svg class="envelope">
                         <use href="./images/sprite.svg#envelope"></use>
                     </svg>
                     info@devstudio.com</a>
-                
+        
                 <!-- phone number-->
-                
+        
                 <a class="header-contacts tel" href="tel:+380961111111">
                     <svg class="smartphone">
                         <use href="./images/sprite.svg#smartphone"></use>
                     </svg>+38 096 111 11 11
                 </a>
-                
+        
             </div>
         </header>
 
@@ -191,7 +195,7 @@
             <div class="container footer-blocks">
                 <div>
                     <div class="logo logo-footer">
-                        <a href="" class="logo-web" id="1">Web<span class="logo-web logo-studio-footer">Studio</span>
+                        <a href="" class="logo__web" id="1">Web<span class="logo__web logo-footer__studio">Studio</span>
                         </a>
                     </div>
                     <address class="address">
@@ -205,34 +209,33 @@
                 <div class="footer-social">
                     <p class="footer-list">Присоединяйтесь</p>
                     <ul class="footer-icons">
-                        <li class="team-icon-list">
-                            <a href="https://www.instagram.com
-                " alt="instagram" class="team-a-icons  footer-a-icons">
-                                <svg class="team-list">
+                        <li class="team__icon-list">
+                            <a href="https://www.instagram.com" alt="instagram" class="team__a-icons  footer-a-icons">
+                                <svg class="team__list">
                                     <use href="./images/sprite.svg#instagram" class="footer-icon">
                                     </use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="team-icon-list">
-                            <a href="#" alt="social network" class="team-a-icons  footer-a-icons">
-                                <svg class="team-list">
+                        <li class="team__icon-list">
+                            <a href="#" alt="social network" class="team__a-icons  footer-a-icons">
+                                <svg class="team__list">
                                     <use href="./images/sprite.svg#twitter" class="footer-icon">
                                     </use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="team-icon-list">
-                            <a href="#" alt="social network" class="team-a-icons  footer-a-icons">
-                                <svg class="team-list">
+                        <li class="team__icon-list">
+                            <a href="#" alt="social network" class="team__a-icons  footer-a-icons">
+                                <svg class="team__list">
                                     <use href="./images/sprite.svg#facebook" class="footer-icon">
                                     </use>
                                 </svg>
                             </a>
                         </li>
-                        <li class="team-icon-list">
-                            <a href="#" alt="social network" class="team-a-icons  footer-a-icons">
-                                <svg class="team-list">
+                        <li class="team__icon-list">
+                            <a href="#" alt="social network" class="team__a-icons  footer-a-icons">
+                                <svg class="team__list">
                                     <use href="./images/sprite.svg#linkedin" class="footer-icon">
                                     </use>
                                 </svg>
